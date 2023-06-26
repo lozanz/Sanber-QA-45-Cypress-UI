@@ -1,0 +1,23 @@
+{
+  "name": "sanber-qa-45-cypress-ui",
+  "version": "1.0.0",
+  "description": "Cypress UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lozanz/Sanber-QA-45-Cypress-UI.git"
+  },
+  "author": "zanzz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lozanz/Sanber-QA-45-Cypress-UI/issues"
+  },
+  "homepage": "https://github.com/lozanz/Sanber-QA-45-Cypress-UI#readme",
+  "dependencies": {
+    "cypress": "^12.15.0"
+  }
+}
