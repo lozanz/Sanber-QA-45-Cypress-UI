@@ -14,7 +14,7 @@ it('add new category with valid data, should contain url /categories (Positive C
   cy.get('#deskripsi').type('minuman bersoda indodrink')
   cy.get('.chakra-button').click()
   cy.url().should('include', '/categories')
-  cy.wait(3000)
+  cy.wait(2000)
   
 })    
 
@@ -24,6 +24,6 @@ it('add new category with empty name (Negative Case)', ()=>{
   cy.get('#deskripsi').type('minuman bersoda indodrink')
   cy.get('.chakra-button').click()
   cy.get('.chakra-alert').should('contain','"name" is not allowed to be empty')
-  cy.wait(3000)
+  cy.wait(2000)
 })   
 })

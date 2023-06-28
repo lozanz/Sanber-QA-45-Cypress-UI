@@ -16,7 +16,7 @@ it('add new customer with valid data, should contain url /customers (Positive Ca
     cy.get('#keterangan').type('Pelanggan VVIP')
     cy.get('.chakra-button').click()
     cy.url().should('include', '/customers')
-    cy.wait(3000)
+    cy.wait(2000)
 })    
 
 it('add new customer with empty name (Negative Case)', ()=>{
@@ -28,7 +28,7 @@ it('add new customer with empty name (Negative Case)', ()=>{
     cy.get('.chakra-button').click()
     cy.url().should('include', '/customers/create')
     cy.get('.chakra-alert').should('contain','"name" is not allowed to be empty')
-    cy.wait(3000)
+    cy.wait(2000)
 })    
 
 it('add new customer with invalid phone (Negative Case)', ()=>{
@@ -41,6 +41,6 @@ it('add new customer with invalid phone (Negative Case)', ()=>{
     cy.get('.chakra-button').click()
     cy.url().should('include', '/customers/create')
     cy.get('.chakra-alert').should('contain','"phone" must be a number')
-    cy.wait(3000)
+    cy.wait(2000)
 })    
 })

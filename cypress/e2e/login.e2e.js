@@ -22,7 +22,7 @@ describe("Login Test", ()=>{
 
     it('user login without email', ()=>{
         cy.visit('https://kasirdemo.belajarqa.com')
-        cy.get('#password').type("1234")
+        cy.get('#password').type(password)
         cy.get('[type = "submit"]').click()
         cy.get('[role = "alert"]').should('contain','"email" is not allowed to be empty');
         cy.wait(2000)

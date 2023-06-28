@@ -21,7 +21,7 @@ it('add new product with valid data, should contain url /products (Positive Case
     cy.contains('Minuman bersoda').click()
     cy.get('.chakra-button').click()
     cy.url().should('include', '/products')
-    cy.wait(3000)
+    cy.wait(2000)
 })    
 
 it('add new product with empty name (Negative Case)', ()=>{
@@ -38,7 +38,7 @@ it('add new product with empty name (Negative Case)', ()=>{
     cy.get('.chakra-button').click()
     cy.url().should('include', '/products/create')
     cy.get('.chakra-alert').should('contain','"name" is not allowed to be empty')
-    cy.wait(3000)
+    cy.wait(2000)
 })  
 
 it('add new product with price < cost (Negative Case)', ()=>{
@@ -56,6 +56,6 @@ it('add new product with price < cost (Negative Case)', ()=>{
     cy.get('.chakra-button').click()
     cy.url().should('include', '/products/create')
     cy.get('.chakra-alert').should('contain','"price" must be greater than ref:cost')
-    cy.wait(3000)
+    cy.wait(2000)
 })  
 })
